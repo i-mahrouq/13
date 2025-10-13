@@ -21,8 +21,3 @@ void ft_putnbr_fd(int n, int fd)
     else
         ft_putchar_fd(nb + 48, fd);
 }
-
-int main()
-{
-    ft_putnbr_fd(147483649, 1);
-}

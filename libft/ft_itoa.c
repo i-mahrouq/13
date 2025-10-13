@@ -1,6 +1,6 @@
 #include "libft.h"
 
-const int count_digits(int n)
+static int count_digits(int n)
 {
     int i;
 
@@ -50,8 +50,4 @@ char *ft_itoa(int nb)
     }
     
     return res;
-}
-int main()
-{
-    printf("%s", ft_itoa(0));
 }

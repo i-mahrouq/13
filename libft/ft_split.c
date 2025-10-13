@@ -1,7 +1,5 @@
 #include "libft.h"
 
-void *ft_memcpy(void *dst, const void *src, size_t n);
-
 static int is_sep(char s, char c)
 {
 	if (s == c)
@@ -19,11 +17,13 @@ static int count_words(char *s, char c)
 	{
 			while (s[i] && is_sep(s[i], c))
 				i++;
-			while (s[i] && !is_sep(s[i], c))
+			if (s[i])
 			{
-				i++;
+				co++;
+				while (s[i] && !is_sep(s[i], c))
+					i++;
 			}
-			co++;
+			
 	}
 	return (co);
 }

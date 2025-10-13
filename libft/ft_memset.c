@@ -9,7 +9,7 @@ void *ft_memset(void *b, int c, size_t len)
     buffer = (unsigned char *)b;
     while (i < len)
     {
-        buffer[i] = c;
+        buffer[i] = (unsigned char)c;
         i++;
     }
     return (b);

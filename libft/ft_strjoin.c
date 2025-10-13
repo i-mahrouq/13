@@ -9,8 +9,8 @@ char *ft_strjoin(char const *s1, char const *s2)
     dst = (char *)malloc(len);
     if (!dst)
         return (NULL);
-    ft_memcpy(dst, s1,strlen(s1));
-    ft_memcpy(dst + strlen(s1), s2,strlen(s2));
+    ft_memcpy(dst, s1, ft_strlen(s1));
+    ft_memcpy(dst + ft_strlen(s1), s2, ft_strlen(s2));
     dst[ft_strlen(s1) + ft_strlen(s2)] = '\0';
     return ((char *)dst);
 }

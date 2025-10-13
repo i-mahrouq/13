@@ -19,7 +19,7 @@ size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
     else
     {
         ft_memcpy(dst + dlen, src, dstsize - dlen - 1);
-        dst[dstsize - dlen - 1] = '\0';
+        dst[dstsize - 1] = '\0';
     }
     return (dlen + slen);
 }
