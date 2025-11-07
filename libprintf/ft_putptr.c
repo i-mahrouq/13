@@ -12,23 +12,23 @@
 
 #include "ft_printf.h"
 
-int ft_putptr(void *ptr)
+int	ft_putptr(void *ptr)
 {
-    unsigned long long addr;
-    int len;
-    int ret;
+	unsigned long long	addr;
+	int					len;
+	int					ret;
 
-    len = 0;
-    if (!ptr)
-        return (write(1, "(nil)", 5));
-    addr = (unsigned long long)ptr;
-    ret = write(1, "0x", 2);
-    if (ret < 0)
-        return (-1);
-    len += ret;
-    ret = ft_puthexa(addr, 'x');
-    if (ret < 0)
-        return (-1);
-    len += ret;
-    return (len);
+	len = 0;
+	if (!ptr)
+		return (write(1, "(nil)", 5));
+	addr = (unsigned long long)ptr;
+	ret = write(1, "0x", 2);
+	if (ret < 0)
+		return (-1);
+	len += ret;
+	ret = ft_puthexa(addr, 'x');
+	if (ret < 0)
+		return (-1);
+	len += ret;
+	return (len);
 }

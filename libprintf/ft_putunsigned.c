@@ -12,22 +12,22 @@
 
 #include "ft_printf.h"
 
-int ft_putunsigned(unsigned int n)
+int	ft_putunsigned(unsigned int n)
 {
-    int len;
-    int ret;
+	int	len;
+	int	ret;
 
-    len = 0;
-    if (n > 9)
-    {
-        ret = ft_putunsigned(n / 10);
-        if (ret < 0)
-            return (-1);
-        len += ret;
-    }
-    ret = ft_putchar('0' + (n % 10));
-    if (ret < 0)
-        return (-1);
-    len += ret;
-    return (len);
+	len = 0;
+	if (n > 9)
+	{
+		ret = ft_putunsigned(n / 10);
+		if (ret < 0)
+			return (-1);
+		len += ret;
+	}
+	ret = ft_putchar('0' + (n % 10));
+	if (ret < 0)
+		return (-1);
+	len += ret;
+	return (len);
 }
